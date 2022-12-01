@@ -33,6 +33,7 @@ void createFile(){ // ini digunakan untuk membuka file dalam file
 
 	printf("\n\nData berhasil dimasukan"); // disini akan keluar output dengan garis baru yang akan mengeluarkan kata-kata tersebut serta akan membuat baris baru dengan double \n
 }
+
 void readFile(){ // void readfile disini untuk membaca file
 	char nama[30], npm[30]; // ini berfungsi untuk setiap character nama atau npm memiliki nilai 30 dan NPM memiliki nilai 8
 	int i = 1; // disini interger dari i sama dengan memiliki nilai 1
