@@ -78,3 +78,42 @@ void deleteFile(){ // void disini untuk mengembalikan fungsi serta akan menghapu
         cout<<"\nError!";// maka akan keluar output dengan baris baru seperti ini
     cout<<endl; // yang dimana akan membuat baris baru dengan menutup line 
 }
+
+void menuFile(){ // disini berfungsi untuk membuat menu file
+	int pilihan; // dengan integer pilihan maka nantinya dapat dipilih dari angka 1 sampai dengan 3 sesuai apa yang nanti akan dibentuk
+	cout<<"+===============+ \n"; // maka akan membuat output seperti disebelah dengan membuat baris baru 
+	cout<<"|   Pilih File	|"<<endl; // akan membuat output seperti sebelah dengan menutup line tersebut
+	cout<<"+===============+ \n"; // membuat output seperti sebelah dengan menambahkan baris baru 
+	cout<<"|1. Create File	|"<<endl; // yang akan membuat output persis seperti yang disebelah dan juga dengan mengakhiri line dan menutup line tersebut
+	cout<<"|2. Read File	|"<<endl; // yang akan membuat output persis seperti yang disebelah dan juga dengan mengakhiri line dan menutup line tersebut
+	cout<<"|3. Delete File	|"<<endl; // yang akan membuat output persis seperti yang disebelah dan juga dengan mengakhiri line dan menutup line tersebut
+	cout<<"+===============+ \n"; // yang akan membuat output seperti ini dan membuat baris baru lagi
+	cout<<"Masukan Pilihan : "; // dan akan membuat output 
+	cin>>pilihan; // disini cin berfungsi mengambil input yang sudah diketikan dan memasukkannya kedalam pilihan yang sudah dibentuk tadi
+	
+	if(pilihan==1){ // disini terdapat pilihan if yang dimana jika pilihan satu akan membuat file tersebut
+		createFile();
+	}
+	if(pilihan==2){ // disini terdapat pilihan if yang dimana jika pilihan dua maka yang terjadi adalah membaca file tersebut
+		readFile();
+	}
+	if(pilihan==3){ // disini terdapat pilihan if yang dimana jika pilihan tiga atau ketiga maka yang terjadi adalah file tersebut akan terhapus
+		deleteFile();
+	}
+}
+
+int main(){ // disini terdapat interger baru yaitu int main yang dimana akan mengeksekusi jenis tipe data yang akan dikembalikan nilainya kembali
+	int ulang; // disini terdapat integer ulang yang dimana nantinya akan mengulang
+	do{ // do disini berfungsi untuk memindahkan posisi pemeriksaan kondisi ke akhir perulangan 
+		menuFile(); // 
+		cout << "\nIngin Ulang Input Data(ya=1/ t!=1)? "; // disini akan menampilkan output seperti disamping dengan membuat baris baru
+		cin >> ulang; // akan mengambil inputan dari user atau dari keyboard dan akan mengulangnya
+		cout << endl; // akan menampilkan output namun akan mengakhiri dari line tersebut
+	}while (ulang==1); // disini sama while disini akan mengulang statement berulang selama kondisi syarat benar yang dimana nilainya yang sudah diinputkan adalah 1
+	
+	cout << "Terimakasih..."; // dam akan menampilkan output seperti ini
+	
+	cout << endl; // akan membuat tampilam dan akan menutup dari line tersebut
+	return 0; // disini return 0 berfungsi untuk memberitahukan bahwa kode terlah selai di eksekusi dengan exit code 0
+	
+}
